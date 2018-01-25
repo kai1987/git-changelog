@@ -41,7 +41,7 @@
   },
   "preferGlobal": "true",
   "bin": {
-    "git-changelog": "tasks/command.js"
+    "git-changelog-zentao": "tasks/command.js"
   },
   "devDependencies": {
     "chai": "^2.2.0",
