@@ -1,3 +1,28 @@
+## git-changelog-zentao
+
+this project is froked from https://github.com/rafinskipg/git-changelog
+
+added support for https://zentao.pm
+
+support Fix,Task,Story
+  ```
+  Task#234,567 finished. wedding system."
+
+  ```
+ will generate
+ ```
+   - Task#234,567 finished. wedding system.
+  ([ba3d6d93](https:/your_repo_url/commit/ba3d6d93b8ddf965368076048cdd0cc67abf3cc3),
+   [Task#234](http://your_zentao_url/index.php?m=task&f=view&taskID=234))
+   [Task#567](http://your_zentao_url/index.php?m=task&f=view&taskID=567))
+
+ ```
+
+ don't forget add zentao_url in .changelogrc
+
+
+---
+
 ![git-changelog logo][logo-image]
 ---
 [![NPM Version][npm-badge]][npm-url]
@@ -57,7 +82,7 @@ Since version `1.0.0` git-changelog has included the [`.changelogrc` specificati
 
 The `.changelogrc` file contains the "standard commit guideliness" that you and your team are following.
 
-This specification is used to grep the commits on your log, it contains a valid JSON that will tell git-changelog which sections to include on the changelog. 
+This specification is used to grep the commits on your log, it contains a valid JSON that will tell git-changelog which sections to include on the changelog.
 
 ```javascript
 {
@@ -280,7 +305,7 @@ git commit -m "docs(readme): Add documentation for explaining the commit message
 git commit -m "refactor: Change other things"
 ```
 
-Closing issues : 
+Closing issues :
 
 ```
 git commit -m "fix(git_changelog_generate): pass tag if it exists to gitReadLog
