@@ -38,6 +38,11 @@ Changelog.prototype.generate = require('./lib/generate');
 
 Changelog.prototype.log = require('./lib/log');
 
+Changelog.prototype.getZentaoLinks= require('./lib/get-zentao-links');
+Changelog.prototype.linkToZentaoBug= require('./lib/link-to-zentao-bug');
+Changelog.prototype.linkToZentaoTask= require('./lib/link-to-zentao-task');
+Changelog.prototype.linkToZentaoStory= require('./lib/link-to-zentao-story');
+
 var changelog = new Changelog();
 
 module.exports = changelog;

@@ -10,6 +10,7 @@ function getRepoSuccess(deferred, url) {
   this.message('remote', this.options.repo_url);
 
   this.getProviderLinks();
+  this.getZentaoLinks();
   this.getGitLogCommands();
   deferred.resolve();
 }
@@ -42,7 +43,7 @@ function init(params, loadRC) {
       }).join('|');
 
       module.log('debug', 'Grep commits: ', module.options.grep_commits);
-    
+
       return module.getRepoUrl();
     })
     .then(getRepoSuccess.bind(this, deferred))

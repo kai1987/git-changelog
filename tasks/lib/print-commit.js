@@ -12,6 +12,15 @@ function printCommit(commit, printCommitLinks) {
     if (commit.closes.length) {
      result += ',\n   ' + commit.closes.map(this.linkToIssue, this).join(', ');
     }
+    if (commit.bugs.length) {
+     result += ',\n   ' + commit.bugs.map(this.linkToZentaoBug, this).join(', ');
+    }
+    if (commit.tasks.length) {
+     result += ',\n   ' + commit.tasks.map(this.linkToZentaoTask, this).join(', ');
+    }
+    if (commit.stories.length) {
+     result += ',\n   ' + commit.stories.map(this.linkToZentaoStory, this).join(', ');
+    }
     result += ')\n';
   } else {
     result += format('%s\n', commit.subject);

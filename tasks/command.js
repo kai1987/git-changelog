@@ -27,9 +27,11 @@ if (process.argv.join('').replace(/\\/g,'/').indexOf('/grunt') === -1) {
     .option('-g, --grep [grep]', 'Grep commits for [grep]')
     .option('-d, --debug', 'Debugger')
     .option('-p, --provider [provider]', 'Provider: gitlab, github, bitbucket (Optional)')
+    .option('-zd, --zentao_url [zentao_url]', 'Repo url [zentao_url]')
     .parse(process.argv);
 
-  console.log('Executing git changelog:');
+  console.log('Executing git changelog::');
+  console.log('zentao_url'+options.zentao_url);
 
   if (program.extended){
     console.log('  - Extended, getting log since the BigBang');
